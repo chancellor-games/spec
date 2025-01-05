@@ -11,6 +11,12 @@ that standard for playing board games online.
 - Client Agnostic
 - Undo capable
 
+## Schema
+
+As part of this spec we will always have our main [JSON
+Schema](https://json-schema.org/) available at
+[https://schema.chancellor.games](https://schema.chancellor.games).
+
 ## Credits
 
 This site is build with [mkdocs](https://www.mkdocs.org/) using the [mkdocs
