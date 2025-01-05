@@ -1,0 +1,75 @@
+site_name: Chancellor Games API
+site_url: https://chancellor.games
+repo_url: https://github.com/chancellor-games/spec
+repo_name: chancellor-games/spec
+theme:
+  name: material
+  features:
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+    - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tracking
+    - toc.follow
+  icon:
+    repo: fontawesome/brands/github-alt
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: amber
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+extra:
+  annotate:
+    json: [.s2]
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/chancellor-games
+      name: Chancellor Games on Github
+markdown_extensions:
+  # Python Markdown
+  - smarty
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: "#"
+
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

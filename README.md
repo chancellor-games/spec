@@ -1,2 +1,3 @@
-# spec
-Main API Spec and Schema for the Chancellor Games API
+# Chancellor.games Spec
+
+This is the main spec and schema for the Chancellor Games API.
