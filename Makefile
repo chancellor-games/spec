@@ -1,10 +1,10 @@
-.PHONY: build dev pull
+.PHONY: build dev pull compile
 
-dev: pull
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+dev:
+	@docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
 
-build: pull
-	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build
+build:
+	@docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build
 
-pull:
-	docker pull squidfunk/mkdocs-material
+compile:
+	@docker run --rm -it --platform=linux/amd64 -v ${PWD}/schema:/schema weibeld/ajv-cli:5.0.0 ajv compile -s schema/chancellor.json
