@@ -86,12 +86,22 @@ nav:
   - API Spec:
       - spec/index.md
       - Glossary: spec/glossary.md
-      - Messages: spec/messages.md
-      - Rest:
-          - Game: api/game.md
-          - Log: api/log.md
-          - State: api/state.md
-          - Actions: api/actions.md
+      - Objects:
+          - Game: spec/objects/game.md
+          - Player: spec/objects/player.md
+          - State: spec/objects/state.md
+          - Action: spec/objects/action.md
+      - Messages:
+          - Create/Created: spec/messages/creation.md
+          - Setup: spec/messages/setup.md
+          - Connected: spec/messages/connected.md
+          - Action: spec/messages/action.md
+          - Random: spec/messages/random.md
+      - Rest API:
+          - Game: spec/rest/game.md
+          - Log: spec/rest/log.md
+          - State: spec/rest/state.md
+          - Actions: spec/rest/actions.md
   - Examples:
       - examples/index.md
       - Game Creation: examples/creation.md
