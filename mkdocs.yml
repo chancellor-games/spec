@@ -9,12 +9,16 @@ theme:
     - content.code.copy
     - content.code.select
     - navigation.footer
-    - navigation.instant
-    - navigation.instant.progress
+    - navigation.indexes
     - navigation.path
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
     - navigation.tracking
     - toc.follow
   icon:
+    logo: fontawesome/solid/chess-king
     repo: fontawesome/brands/github-alt
   palette:
     # Palette toggle for light mode
@@ -39,6 +43,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/chancellor-games
       name: Chancellor Games on Github
+    - icon: fontawesome/brands/docker
+      link: https://github.com/orgs/chancellor-games/packages
+      name: Chancellor Games Docker Images
 markdown_extensions:
   # Python Markdown
   - smarty
@@ -73,3 +80,28 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+
+nav:
+  - Home: index.md
+  - API Spec:
+      - spec/index.md
+      - Glossary: spec/glossary.md
+      - Messages: spec/messages.md
+      - Rest:
+          - Game: api/game.md
+          - Log: api/log.md
+          - State: api/state.md
+          - Actions: api/actions.md
+  - Examples:
+      - examples/index.md
+      - Game Creation: examples/creation.md
+      - Connecting: examples/connecting.md
+      - Setup: examples/setup.md
+      - Turns:
+          - Ada: examples/ada.md
+          - Betty: examples/better.md
+          - Carol: examples/carol.md
+  - Implementations:
+      - implementations/index.md
+      - Javascript:
+          - Nomad: implementations/nomad.md

@@ -1,4 +1,4 @@
-# Welcome
+# Getting Started
 
 Welcome to the specification site for the Chancellor Games API.
 
