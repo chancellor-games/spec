@@ -118,7 +118,7 @@ nav:
       - Setup: examples/setup.md
       - Turns:
           - Ada: examples/ada.md
-          - Betty: examples/better.md
+          - Betty: examples/betty.md
           - Carol: examples/carol.md
   - Implementations:
       - implementations/index.md
