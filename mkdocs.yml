@@ -2,6 +2,8 @@ site_name: Chancellor Games API
 site_url: https://chancellor.games
 repo_url: https://github.com/chancellor-games/spec
 repo_name: chancellor-games/spec
+plugins:
+  - mermaid2
 theme:
   name: material
   features:
@@ -17,6 +19,7 @@ theme:
     - navigation.top
     - navigation.tracking
     - toc.follow
+    - toc.integrate
   icon:
     logo: fontawesome/solid/chess-king
     repo: fontawesome/brands/github-alt
@@ -74,7 +77,12 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
@@ -86,6 +94,7 @@ nav:
   - API Spec:
       - spec/index.md
       - Glossary: spec/glossary.md
+      - Diagrams: spec/diagrams.md
       - Objects:
           - Game: spec/objects/game.md
           - Player: spec/objects/player.md
