@@ -101,10 +101,12 @@ nav:
           - State: spec/objects/state.md
           - Action: spec/objects/action.md
       - Messages:
-          - Create/Created: spec/messages/creation.md
-          - Setup: spec/messages/setup.md
           - Connected: spec/messages/connected.md
+          - Meta: spec/messages/meta.md
+          - Create: spec/messages/create.md
+          - Setup: spec/messages/setup.md
           - Action: spec/messages/action.md
+          - Finish: spec/messages/finish.md
           - Random: spec/messages/random.md
       - Rest API:
           - Game: spec/rest/game.md

@@ -23,7 +23,7 @@ sequenceDiagram
     end
 ```
 
-## Connecting
+## Connected
 
 ```mermaid
 sequenceDiagram
@@ -33,6 +33,17 @@ sequenceDiagram
     C-->>+S: new EventSource()
     S-->>C: server.connected
     S--)-C: server.meta
+```
+
+## Create
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant C as Client
+    participant S as Server
+    C-->>+S: POST client.create
+    S-->>C: server.create
 ```
 
 ## Setup
@@ -90,8 +101,8 @@ sequenceDiagram
     participant C as Carol
     participant S as Server
     Note over A: Request a new game
-    A->>+S: POST client.game
-    S->>-A: server.game
+    A->>+S: POST client.create
+    S->>-A: server.create
 
     Note over S: All players connect
     A-->>+S: new EventSource()
@@ -114,9 +125,9 @@ sequenceDiagram
         S--)-C: server.random
     end
     A-->>+S: client.setup
-    S--)A: server.started
-    S--)B: server.started
-    S--)-C: server.started
+    S--)A: server.setup
+    S--)B: server.setup
+    S--)-C: server.setup
 
     loop Actions until game is finished
         Note over A: Ada's Turn
