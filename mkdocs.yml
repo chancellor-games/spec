@@ -122,7 +122,11 @@ nav:
           - Ada: examples/ada.md
           - Betty: examples/betty.md
           - Carol: examples/carol.md
-  - Implementations:
-      - implementations/index.md
-      - Javascript:
-          - Nomad: implementations/nomad.md
+  - Software:
+      - software/index.md
+      - Libraries:
+          - Exile: software/exile.md
+      - Implementations:
+          - Nomad: software/nomad.md
+      - Other:
+          - Clockwork: software/clockwork.md

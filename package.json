@@ -1,0 +1,78 @@
+{
+  "name": "@chancellor-games/spec",
+  "version": "0.0.1",
+  "description": "Main API Spec and Schema for the Chancellor Games API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "pretty": "prettier -c .",
+    "pretty:fix": "prettier --write .",
+    "test": "ajv compile -s schema/chancellor.json"
+  },
+  "bin": {
+    "chancellor": "bin/cli.js"
+  },
+  "keywords": [],
+  "author": "Christopher Giroir <kelsin@valefor.com>",
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        0,
+        "always"
+      ],
+      "footer-max-line-length": [
+        0,
+        "always"
+      ],
+      "header-max-length": [
+        0,
+        "always"
+      ]
+    }
+  },
+  "prettier": {
+    "plugins": [
+      "@ianvs/prettier-plugin-sort-imports"
+    ],
+    "importOrder": [
+      "<BUILTIN_MODULES>",
+      "",
+      "<THIRD_PARTY_MODULES>",
+      "",
+      "^ramda$",
+      "",
+      "^@(/.*)$",
+      "^#(.*)$",
+      "^[.]",
+      "",
+      "^@tests(/.*)$",
+      "",
+      "^(?!.*[.]css$)[./].*$",
+      ".css$"
+    ],
+    "importOrderCaseSensitive": true
+  },
+  "dependencies": {
+    "ajv": "^8.17.1",
+    "commander": "^13.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.18.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
+    "ajv-cli": "^5.0.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.2",
+    "globals": "^15.14.0",
+    "lefthook": "^1.10.7",
+    "prettier": "^3.4.2"
+  }
+}
